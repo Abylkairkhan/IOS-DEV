@@ -16,27 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-ii-ZtS">
-                                <rect key="frame" x="118" y="677" width="157" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Roll Dice"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice-one" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-OY-es5">
-                                <rect key="frame" x="47" y="362" width="128" height="129"/>
+                                <rect key="frame" x="47" y="362" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice-two" translatesAutoresizingMaskIntoConstraints="NO" id="2VV-h9-Wxh">
-                                <rect key="frame" x="218" y="362" width="128" height="129"/>
+                                <rect key="frame" x="218" y="362" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-ii-ZtS">
+                                <rect key="frame" x="110" y="674" width="172" height="53"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Roll Dice"/>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7zN-kD-Bjg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S9l-ii-ZtS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="78r-vg-go8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S9l-ii-ZtS" secondAttribute="trailing" constant="118" id="QT8-wI-ihc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S9l-ii-ZtS" secondAttribute="bottom" constant="91" id="ovU-Sa-vlp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImageView1" destination="1r0-OY-es5" id="ocX-oS-hOH"/>
+                        <outlet property="diceImageView2" destination="2VV-h9-Wxh" id="Yf7-JO-qXP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
