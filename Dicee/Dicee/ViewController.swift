@@ -28,11 +28,11 @@ class ViewController: UIViewController {
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         if let diceImage1 = diceArray.randomElement() as? UIImage {
-                    diceImageView1.image = diceImage1
-                }
-                if let diceImage2 = diceArray.randomElement() as? UIImage {
-                    diceImageView2.image = diceImage2
-                }
+            diceImageView1.image = diceImage1
+        }
+        if let diceImage2 = diceArray.randomElement() as? UIImage {
+            diceImageView2.image = diceImage2
+        }
     }
 }
 
