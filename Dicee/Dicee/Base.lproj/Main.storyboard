@@ -16,32 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-ii-ZtS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-ii-ZtS">
                                 <rect key="frame" x="118" y="692.66666666666663" width="157" height="34.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Roll Dice"/>
                                 <connections>
                                     <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7zN-kD-Bjg"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice-one" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-OY-es5">
-                                <rect key="frame" x="207" y="362" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="P5h-Ni-oIa"/>
-                                    <constraint firstAttribute="width" constant="128" id="kID-w4-EfO"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice-two" translatesAutoresizingMaskIntoConstraints="NO" id="2VV-h9-Wxh">
-                                <rect key="frame" x="57" y="362" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="Zu4-dw-hTl"/>
-                                    <constraint firstAttribute="height" constant="128" id="phm-jI-KUR"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="xU2-k1-JZ8">
+                                <rect key="frame" x="85" y="376" width="222" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-two" translatesAutoresizingMaskIntoConstraints="NO" id="2VV-h9-Wxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="4uK-nN-iZc"/>
+                                            <constraint firstAttribute="width" constant="100" id="i34-gm-oIv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-one" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-OY-es5">
+                                        <rect key="frame" x="122" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6qv-sa-3BA"/>
+                                            <constraint firstAttribute="height" constant="100" id="c1K-j6-yFx"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S9l-ii-ZtS" secondAttribute="bottom" constant="91.000000000000114" id="Gk8-fc-NjY"/>
+                            <constraint firstItem="xU2-k1-JZ8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dHH-km-Yed"/>
+                            <constraint firstItem="xU2-k1-JZ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gCz-Fg-hrH"/>
+                            <constraint firstItem="S9l-ii-ZtS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="qxJ-qE-g7c"/>
+                            <constraint firstItem="xU2-k1-JZ8" firstAttribute="centerX" secondItem="S9l-ii-ZtS" secondAttribute="centerX" id="u3a-WS-LZz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="diceImageView1" destination="1r0-OY-es5" id="ocX-oS-hOH"/>
