@@ -20,6 +20,7 @@ class BookCell: UITableViewCell {
     func configure(_ book: Book) {
         bookImage.image = book.image
         bookName.text = book.title
+        
     }
     
 }

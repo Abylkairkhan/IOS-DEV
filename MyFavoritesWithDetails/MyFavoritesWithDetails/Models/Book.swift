@@ -11,6 +11,7 @@ struct Book {
     let image: UIImage
     let title: String
     let description: String
+    let author: String
     let countOfPages: Int
     var isFavorite: Bool = false
 }
