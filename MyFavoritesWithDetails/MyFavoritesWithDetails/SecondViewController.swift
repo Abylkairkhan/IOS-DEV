@@ -15,7 +15,6 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var bookPageCount: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
     
-    
     private var book: Book?
     
     override func viewDidLoad() {

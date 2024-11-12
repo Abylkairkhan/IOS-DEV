@@ -62,7 +62,6 @@ class ViewController: UIViewController {
             return
         }
         destVC.configure(with: selectedBook)
-
     }
 }
 
