@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperHero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W0A-IJ-ZpI">
+                                <rect key="frame" x="66.666666666666686" y="69" width="260" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="Cql-r3-5mp"/>
+                                    <constraint firstAttribute="height" constant="350" id="jv7-rh-WwT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9a-Lf-7St">
+                                <rect key="frame" x="40" y="773" width="313" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yxj-YW-Rmk"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get your hero!">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Futura-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getHeroClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TQq-fC-d34"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Spider Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-1m-4S3">
+                                <rect key="frame" x="30" y="439" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender: Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxx-Dj-ybA">
+                                <rect key="frame" x="30" y="475" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukn-oo-qWV">
+                                <rect key="frame" x="30" y="511" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrM-Cy-ibq">
+                                <rect key="frame" x="30" y="547" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weigh: 70" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJy-Cm-Cfe">
+                                <rect key="frame" x="30" y="583" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eye color: Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8y-wu-J3I">
+                                <rect key="frame" x="30" y="619" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hair color: Black" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-lj-ish">
+                                <rect key="frame" x="30" y="655" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race: Human" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVE-0I-npC">
+                                <rect key="frame" x="30" y="691" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place of birth: Earth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLg-xK-IUK">
+                                <rect key="frame" x="30" y="727" width="333" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bek-lj-ish" firstAttribute="top" secondItem="u8y-wu-J3I" secondAttribute="bottom" constant="10" id="0Hg-6o-GNI"/>
+                            <constraint firstItem="n2N-1m-4S3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3Ib-kq-a4Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u8y-wu-J3I" secondAttribute="trailing" constant="30" id="4SJ-12-QJB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJy-Cm-Cfe" secondAttribute="trailing" constant="30" id="66e-Gu-EtC"/>
+                            <constraint firstItem="JrM-Cy-ibq" firstAttribute="top" secondItem="Ukn-oo-qWV" secondAttribute="bottom" constant="10" id="7JX-KE-Aeq"/>
+                            <constraint firstItem="W0A-IJ-ZpI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9Z3-H9-E9n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gxx-Dj-ybA" secondAttribute="trailing" constant="30" id="B1E-Q5-gUc"/>
+                            <constraint firstItem="wJy-Cm-Cfe" firstAttribute="top" secondItem="JrM-Cy-ibq" secondAttribute="bottom" constant="10" id="CtZ-0e-fMd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KVE-0I-npC" secondAttribute="trailing" constant="30" id="EUg-JE-HL4"/>
+                            <constraint firstItem="gxx-Dj-ybA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Eex-hv-kog"/>
+                            <constraint firstItem="Ukn-oo-qWV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GXv-x0-EgI"/>
+                            <constraint firstItem="c9a-Lf-7St" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GYg-Qt-iOk"/>
+                            <constraint firstItem="n2N-1m-4S3" firstAttribute="top" secondItem="W0A-IJ-ZpI" secondAttribute="bottom" constant="20" id="H6R-pV-py7"/>
+                            <constraint firstItem="wJy-Cm-Cfe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HLN-Yl-S2O"/>
+                            <constraint firstItem="kLg-xK-IUK" firstAttribute="top" secondItem="KVE-0I-npC" secondAttribute="bottom" constant="10" id="Ir1-QB-uPB"/>
+                            <constraint firstItem="W0A-IJ-ZpI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MDC-oW-AqR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c9a-Lf-7St" secondAttribute="trailing" constant="40" id="NPJ-Rn-y2m"/>
+                            <constraint firstItem="KVE-0I-npC" firstAttribute="top" secondItem="Bek-lj-ish" secondAttribute="bottom" constant="10" id="QBO-Xr-0Yt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bek-lj-ish" secondAttribute="trailing" constant="30" id="RVP-Th-KDJ"/>
+                            <constraint firstItem="Bek-lj-ish" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ri6-hF-o1u"/>
+                            <constraint firstItem="JrM-Cy-ibq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RvX-cg-wbT"/>
+                            <constraint firstItem="u8y-wu-J3I" firstAttribute="top" secondItem="wJy-Cm-Cfe" secondAttribute="bottom" constant="10" id="ehy-Sw-Asw"/>
+                            <constraint firstItem="gxx-Dj-ybA" firstAttribute="top" secondItem="n2N-1m-4S3" secondAttribute="bottom" constant="10" id="lRV-k9-nhB"/>
+                            <constraint firstItem="KVE-0I-npC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="pKX-E5-A31"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrM-Cy-ibq" secondAttribute="trailing" constant="30" id="pfz-PU-zu0"/>
+                            <constraint firstItem="Ukn-oo-qWV" firstAttribute="top" secondItem="gxx-Dj-ybA" secondAttribute="bottom" constant="10" id="ps4-HN-Kbb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ukn-oo-qWV" secondAttribute="trailing" constant="30" id="t5n-oC-j1d"/>
+                            <constraint firstItem="kLg-xK-IUK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uoy-y9-APT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kLg-xK-IUK" secondAttribute="trailing" constant="30" id="vCO-O9-L5T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n2N-1m-4S3" secondAttribute="trailing" constant="30" id="vU5-hM-ZV4"/>
+                            <constraint firstItem="u8y-wu-J3I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="vdS-AK-BxU"/>
+                            <constraint firstItem="c9a-Lf-7St" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="5" id="zJP-NK-uJz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroBirth" destination="kLg-xK-IUK" id="6zG-dC-cXE"/>
+                        <outlet property="heroEyeColor" destination="u8y-wu-J3I" id="hap-gd-8lA"/>
+                        <outlet property="heroGender" destination="gxx-Dj-ybA" id="ZhT-bU-Yob"/>
+                        <outlet property="heroHairColor" destination="Bek-lj-ish" id="gac-MI-gCA"/>
+                        <outlet property="heroImage" destination="W0A-IJ-ZpI" id="66X-X7-PMz"/>
+                        <outlet property="heroName" destination="n2N-1m-4S3" id="fRL-jK-eV5"/>
+                        <outlet property="heroPower" destination="Ukn-oo-qWV" id="m9O-b1-ylb"/>
+                        <outlet property="heroRace" destination="KVE-0I-npC" id="clH-on-uOo"/>
+                        <outlet property="heroSpeed" destination="JrM-Cy-ibq" id="d3M-JU-KaS"/>
+                        <outlet property="heroWeight" destination="wJy-Cm-Cfe" id="GCD-e3-q5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
