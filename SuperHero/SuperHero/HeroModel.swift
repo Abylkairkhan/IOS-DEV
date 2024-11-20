@@ -23,7 +23,7 @@ struct PowerStats: Codable {
 
 struct Appearance: Codable {
     let gender: String
-    let race: String
+    let race: String?
     let height: [String]
     let weight: [String]
     let eyeColor: String

@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         let urlRequest = URLRequest(url: url)
         
         URLSession.shared.dataTask(with: urlRequest) {
-            data, response, error in guard self.handleErrorIfNeeded(error: error) == false else {
+            data, response, error in guard self.handleError(error: error) == false else {
                 return
             }
 
@@ -53,20 +53,20 @@ class ViewController: UIViewController {
                 print(hero.name)
                 self.stopShimmerAnimation()
                 self.heroImage.image = heroImage
-                self.heroName.text = hero.name
-                self.heroGender.text = hero.appearance.gender
-                self.heroPower.text = "\(hero.powerstats.power)"
-                self.heroSpeed.text = "\(hero.powerstats.speed)"
-                self.heroWeight.text = hero.appearance.weight.last ?? "Unknown"
-                self.heroEyeColor.text = hero.appearance.eyeColor
-                self.heroHairColor.text = hero.appearance.hairColor
-                self.heroRace.text = hero.appearance.race
-                self.heroBirth.text = hero.biography.placeOfBirth
+                self.heroName.text = "Name: " + hero.name
+                self.heroGender.text = "Gender: " + hero.appearance.gender
+                self.heroPower.text = "Power: \(hero.powerstats.power)"
+                self.heroSpeed.text = "Speed: \(hero.powerstats.speed)"
+                self.heroWeight.text = "Weight: " + (hero.appearance.weight.last ?? "Unknown")
+                self.heroEyeColor.text = "Eye color: " + hero.appearance.eyeColor
+                self.heroHairColor.text = "Hair color: " + hero.appearance.hairColor
+                self.heroRace.text = "Race: " + (hero.appearance.race ?? "Unknown")
+                self.heroBirth.text = "Birth: " + hero.biography.placeOfBirth
             }
         } catch {
             DispatchQueue.main.async {
                 self.stopShimmerAnimation()
-                print("Failed to decode hero data: \(error)")
+                self.heroName.text = error.localizedDescription
             }
         }
     }
@@ -81,16 +81,15 @@ class ViewController: UIViewController {
         return UIImage(data: imageData)
     }
 
-    private func handleErrorIfNeeded(error: Error?) -> Bool {
+    private func handleError(error: Error?) -> Bool {
         guard let error else {
             return false
         }
-        print(error.localizedDescription)
+        heroName.text = error.localizedDescription
         return true
     }
     
     private func clearHeroData() {
-        // Reset image and labels to avoid overlap
         heroImage.image = nil
         heroName.text = "   "
         heroGender.text = "   "
@@ -160,7 +159,7 @@ class ViewController: UIViewController {
             return layer
         }()
         
-        view.layoutIfNeeded() // Ensure the view's layout is updated
+        view.layoutIfNeeded()
         shimmerLayer.frame = view.bounds
         view.layer.addSublayer(shimmerLayer)
         shimmerLayers.append(shimmerLayer)
